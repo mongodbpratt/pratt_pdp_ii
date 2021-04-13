@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script defer src="./js/script.js"></script>
+        <title>NEXTGEN Defense</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400&display=swap');
+            input {
+                border: 1;
+                padding: 1px;
+                font-size: 15px;
+                border-color: grey;
+            }
+            input[type="submit"] {
+                background: black;
+                color: white;
+                border-color: cornsilk;
+            }
+            body {
+                background-color: #363334;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                color: blanchedalmond;
+            }
+            a:link{
+                color:white;
+            }
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                color:white;
+            }
+            a:focus{
+                color:white;
+            }
+            a:active{
+                color:white;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap" rel="stylesheet">
+        <title>show</title>
+    </head>
+  <body>
+    <h1>Edit Property Page</h1>
+    <!--  NOTE: the form is pre-populated with values for the server-->
+    <form action="/property/<%=property.id%>?_method=PUT" method="POST">
+      Name:
+      <input type="text" name="name" value="<%= property.name %>" /><br /><br />
+      Serial Number:
+      <input type="text" name="serialnumber" value="<%= property.serialnumber %>" /><br /><br />
+      Picture: 
+      <input type="url" name="picture" value="<%= property.picture %>" /><br/>
+      Location: 
+      <input type="text" name="location" value="<%= property.location %>" /><br/>
+      Sub-Hand Receipt Holder: 
+      <input type="text" name="subhandreceiptholder" value="<%= property.subhandreceiptholder %>" /><br/>
+      Quantity: 
+      <input type="interger" name="quantity" value="<%= property.quantity %>" /><br/>
+      <br />
+      <br />
+      <input type="submit" name="" value="Submit Changes">
+    </form>
+  </body>
+</html>property
